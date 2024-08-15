@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEXANIMESTUDIO</title>
+    <style type="text/css">
+        * {
+            padding: 0; 
+            margin: 0; 
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black; /* Set the website background color to black */
+            font-family: sans-serif;
+        }
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)),
+                        url('demon-slayer.gif') no-repeat center center/cover;
+        }
+        
+        nav {
+            width: 100%;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before {
+            content: '';
+            position: absolute;
+            top:0;
+            left: 0;
+            width:0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
+        }
+        .menu a:hover:before {
+            width: 90%;
+        }
+        .Join a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .Join a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+        .h-txt {
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+        .h-txt span {
+            letter-spacing: 5px;
+        }
+        .h-txt h1 {
+            font-size: 3.5em;
+        }
+        .h-txt a {
+            text-decoration: none;
+            background: indianred;
+            color: white;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+            transition: 0.4s;
+        }
+        .h-txt a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+        /* Latest Animes Section */
+        .section-title {
+            color: white;
+            font-size: 24px;
+            padding: 20px; /* Added padding to ensure the title has space */
+            background: black; /* Same background as cards */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section-title a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .section-title a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+        /* Anime Cards */
+        .anime-cards {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: black;
+        }
+        .anime-card {
+            background: #1a1a1a;
+            color: white;
+            width: 300px;
+            height: 350px;
+            margin-right: 15px;
+            text-align: center;
+            vertical-align: top;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .anime-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .anime-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .anime-card p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .anime-card a {
+            text-decoration: none;
+            background: indianred;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.4s;
+            margin-top: 10px;
+        }
+        .anime-card a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+        
+        /* Latest Manga Section */
+        .manga-cards {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background: black;
+        }
+        .manga-card {
+            background: #1a1a1a;
+            color: white;
+            width: 300px;
+            height: 350px;
+            margin-right: 15px;
+            text-align: center;
+            vertical-align: top;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        .manga-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .manga-card h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+        .manga-card p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .manga-card a {
+            text-decoration: none;
+            background: indianred;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.4s;
+            margin-top: 10px;
+        }
+        .manga-card a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            NEXANIMESTUDIO  
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Dubbed Animes</a>
+            <a href="#">Manga</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="Join">
+            <a href="#">JOIN</a>  
+        </div>
+    </nav>
+    <section class="h-txt">
+        <span>Enjoy</span>
+        <h1>Best Indian Anime Dubs</h1>
+        <br>
+        <a href="#">Watch Now</a>
+    </section>
+</header>
+
+<!-- Latest Animes Section -->
+<section>
+    <div class="section-title">
+        <h2>Latest Animes</h2>
+        <a href="#">Show More</a>
+    </div>
+    <div class="anime-cards">
+        <div class="anime-card">
+            <img src="anime1.jpg" alt="Anime 1">
+            <h3>Anime Title 1</h3>
+            <p>Short description of Anime 1.</p>
+            <a href="#">Watch Now</a>
+        </div>
+        <div class="anime-card">
+            <img src="anime2.jpg" alt="Anime 2">
+            <h3>Anime Title 2</h3>
+            <p>Short description of Anime 2.</p>
+            <a href="#">Watch Now</a>
+        </div>
+        <div class="anime-card">
+            <img src="anime3.jpg" alt="Anime 3">
+            <h3>Anime Title 3</h3>
+            <p>Short description of Anime 3.</p>
+            <a href="#">Watch Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Manga Section -->
+<section>
+    <div class="section-title">
+        <h2>Latest Manga</h2>
+        <a href="manga.html">Show More</a>
+    </div>
+    <div class="manga-cards">
+        <div class="manga-card">
+            <img src="sl.jpg" alt="Manga 1">
+            <h3>SOLO LEVELING</h3>
+            <p>Short description of Manga 1.</p>
+            <a href="#">Read Now</a>
+        </div>
+        <div class="manga-card">
+            <img src="yrn.jpg" alt="Manga 2">
+            <h3>YOUR NAME</h3>
+            <p>Short description of Manga 2.</p>
+            <a href="#">Read Now</a>
+        </div>
+        <div class="manga-card">
+            <img src="spa.jpg" alt="Manga 3">
+            <h3>SPRITED AWAY</h3>
+            <p>Short description of Manga 3.</p>
+            <a href="#">Read Now</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
