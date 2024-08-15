@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATEST MANGAS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+        }
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #25283B;
+        }
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
+        }
+        .menu a:hover:before {
+            width: 90%;
+        }
+        .Join a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .Join a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+    </style>
+    <link rel="stylesheet" href="manga.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">MangaSite</div>
+        <div class="menu">
+            <a href="landingpage.html">Home</a>
+            <a href="#">Mangas</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="Join">
+            <a href="#">Join Now</a>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <div class="slider" style="--quantity: 10">
+            <div class="item" style="--position: 1">
+                <img src="imagesldp/spa.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 2">
+                <img src="imagesldp/yrn.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 3">
+                <img src="imagesldp/jjk.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 4">
+                <img src="imagesldp/dmm.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 5">
+                <img src="imagesldp/op.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 6">
+                <img src="imagesldp/max.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 7">
+                <img src="imagesldp/nicromace.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 8">
+                <img src="imagesldp/kaiju.jpg" alt="">>
+            </div>
+            <div class="item" style="--position: 9">
+                <img src="imagesldp/slr.jpg" alt="">
+            </div>
+            <div class="item" style="--position: 10">
+                <img src="imagesldp/sl.jpg" alt="">
+            </div>
+        </div>
+        <div class="content">
+            <h1 data-content="CSS ONLY">
+                CSS ONLY
+            </h1>
+            <div class="author">
+                <h2>LUN DEV</h2>
+                <p><b>Web Design</b></p>
+                <p>
+                    Subscribe to the channel to watch many interesting videos
+                </p>
+            </div>
+            <div class="model"></div>
+        </div>
+    </div>
+    <!-- Latest Manga Section -->
+<section>
+    <div class="section-title">
+        <h2>Latest Manga</h2>
+        <a href="manga.html"></a>
+    </div>
+    <div class="manga-cards">
+        <div class="manga-card">
+            <img src="imagesldp/slr.jpg" alt="Manga 1">
+            <h3>SOLO LEVELING RAGNAROK</h3>
+            <p>AVAILABLE ON ENGLISH</p>
+            <a href="slr.html">Read Now</a>
+        </div>
+        <div class="manga-card">
+            <img src="imagesldp/yrn.jpg" alt="Manga 2">
+            <h3>YOUR NAME</h3>
+            <p>Short description of Manga 2.</p>
+            <a href="#">Read Now</a>
+        </div>
+        <div class="manga-card">
+            <img src="imagesldp/spa.jpg" alt="Manga 3">
+            <h3>SPRITED AWAY</h3>
+            <p>Short description of Manga 3.</p>
+            <a href="#">Read Now</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
