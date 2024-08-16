@@ -140,13 +140,13 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-    background-image: url('imslr/slec1t.jpg');
+    background-image: url('slec1t.jpg');
 }
 .card[for="c2"] {
-    background-image: url('imslr/sc2--1.webp');
+    background-image: url('sc2--1.webp');
 }
 .card[for="c3"] {
-    background-image: url('imslr/3sr1.webp');
+    background-image: url('3sr1.webp');
 }
 .card[for="c4"] {
     background-image: url('./img4.jpeg');
