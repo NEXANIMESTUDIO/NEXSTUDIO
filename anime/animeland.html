@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Mangas</title>
+    <link rel="stylesheet" href="animeland.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #D2D2D2;
+            background-image:
+            repeating-linear-gradient(
+                to right, transparent 0 100px,
+                #25283b22 100px 101px
+            ),
+            repeating-linear-gradient(
+                to bottom, transparent 0 100px,
+                #25283b22 100px 101px
+            );
+            height: 100%;
+            padding-bottom: 100px; /* Space for the fixed navigation bar */
+        }
+        body::before{
+            position: absolute;
+            width: min(1400px, 90vw);
+            top: 10%;
+            left: 50%;
+            height: 90%;
+            transform: translateX(-50%);
+            content: '';
+            background-image: url(bg.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            pointer-events: none;
+        }
+
+        nav {
+          width: 100%;
+          height: 100px;
+          color: white;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background-color: #25283B;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: 1000;
+        }
+      
+        .logo {
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            position: relative;
+        }
+        .menu a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            border-bottom: 2px solid indianred;
+            transition: 0.4s linear;
+        }
+        .menu a:hover:before {
+            width: 90%;
+        }
+        .Join a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .Join a:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+    </style>
+</head>
+<body>
+    <!-- Content here -->
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">MangaSite</div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="anime.html">Animes</a>
+            <a href="manga.html">Manga</a>
+            <a href="movie.html">Movies</a>
+            <a href="musics.html">Musics</a>
+        </div>
+        <div class="Join">
+            <a href="https://whatsapp.com/channel/0029VaZStrz5PO12OloBvn0A">JOIN</a>
+        </div>
+    </nav>
+</body>
+</html>
+    
+    <style>
+        /* Pop-up styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            text-align: center;
+            transition: all 0.3s ease;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+        .popup h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .button.green {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pop-up -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Select a Category</h2>
+        <p>Nexstudio sorted manga and manga explanation</p>
+        <button class="button" id="ReadMangas">Read Mangas</button>
+        <button class="button" id="MangaExplanation">Manga Explanation</button>
+    </div>
+
+    <script>
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popup = document.getElementById('popup');
+        const ReadMangasBtn = document.getElementById('ReadMangas');
+        const MangaExplanationBtn = document.getElementById('MangaExplanation');
+
+        // Show pop-up with fade-in effect
+        function showPopup() {
+            popupOverlay.style.display = 'block';
+            popup.style.display = 'block';
+            setTimeout(() => {
+                popup.style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 10);
+        }
+
+        // Handle button clicks
+        ReadMangasBtn.addEventListener('click', function () {
+            ReadMangasBtn.classList.add('green');
+            setTimeout(() => {
+                window.location.href = "manga.html";
+            }, 300);
+        });
+
+        MangaExplanationBtn.addEventListener('click', function () {
+            MangaExplanationBtn.classList.add('green');
+            setTimeout(() => {
+                window.location.href = "mangaexplanation.html";
+            }, 300);
+        });
+
+        // Display the pop-up when the page loads
+        window.onload = show;
+    </script>
+    
+    <style>
+        /* Additional pop-up for updates */
+        .popup-overlayt {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+            display: none;
+        }
+        .popupt {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 9999;
+            text-align: center;
+            transition: all 0.3s ease;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+        .popupt img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .popupt h2 {
+            margin: 0 0 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .popupt p {
+            margin: 0 0 20px;
+            font-size: 18px;
+            color: #666;
+        }
+        .popupt .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+        .buttont {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .buttont:hover {
+            background-color: #0056b3;
+        }
+        .buttont.close-btn {
+            background-color: #f44336;
+        }
+        .buttont.close-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pop-up Overlay -->
+    <div class="popup-overlayt" id="popup-overlayt"></div>
+
+    <!-- Pop-up Content -->
+    <div class="popupt" id="popupt">
+        <img src="update-image.jpg" alt="Update Image">
+        <h2>New Update Available!</h2>
+        <p>We've added some exciting new features to our website. Check them out now!</p>
+        <div class="buttons">
+            <button class="buttont close-btn" id="okayBtn">Okay</button>
+            <button class="buttont" id="checkUpdateBtn">Check Update</button>
+        </div>
+    </div>
+
+    <script>
+        const updateVersion = 'v1.1';  // Change this value with each new update
+
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('popup-overlayt').style.display = 'block';
+            document.getElementById('popupt').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('popupt').style.transform = 'translate(-50%, -50%) scale(1)';
+            }, 10);
+        }
+
+        // Function to hide the popup
+        function hidePopup() {
+            document.getElementById('popupt').style.transform = 'translate(-50%, -50%) scale(0.8)';
+            setTimeout(() => {
+                document.getElementById('popup-overlayt').style.display = 'none';
+                document.getElementById('popupt').style.display = 'none';
+            }, 300);
+            // Save the update version in local storage
+            localStorage.setItem('latestUpdateSeen', updateVersion);
+        }
+
+        // Function to handle the "Check Update" button click
+        function checkUpdate() {
+            hidePopup();
+            alert("Redirecting to updates...");
+            // Add your redirection logic here
+            window.location.href = "updates.html"; // Replace with your updates page URL
+        }
+
+        // Show the popup only if the user hasn't seen the latest update
+        if (localStorage.getItem('latestUpdateSeen') !== updateVersion) {
+            showPopup();
+        }
+
+        // Add event listeners to buttons
+        document.getElementById('okayBtn').addEventListener('click', hidePopup);
+        document.getElementById('checkUpdateBtn').addEventListener('click', checkUpdate);
+    </script>
+</body>
+</html>
